@@ -14,6 +14,7 @@ main(int argc, char* argv[])
 		exit(1);
 	}
 
+	//argv[1]파일을 text read 모드로 open
 	if ((src = fopen(argv[1], "rt")) == NULL) {
 		perror("fopen");
 		exit(1);
@@ -21,12 +22,15 @@ main(int argc, char* argv[])
 
 	printf("%c\n", *argv[2]);
 
+	//argv[1]파일을 한글자씩 읽어옴, 다 읽으면 loop 빠져나옴
 	while ((ch = fgetc(src)) != EOF) {
+		//읽어온 char이 argv[2]와 일치하면 count 1 증가
 		if (ch == *argv[2]) {
 			count++;
 		}
 	}
 
+	//argv[1]파일 내의 argv[2]의 개수 출력
 	printf("%d\n", count);
 	fclose(src);
 }
