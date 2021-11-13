@@ -9,7 +9,7 @@ main(int argc, char* argv[])
 	char ch;
 	int count = 0;
 
-	if (argc != 3) {
+	if (argc != 3) {//argc!=3이면 프로그램 종료
 		fprintf(stderr, "Usage: %s source destination\n", argv[0]);
 		exit(1);
 	}

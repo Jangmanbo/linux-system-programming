@@ -8,7 +8,9 @@ main(int argc, char* argv[]) {
 		exit(1);
 	}
 
+	//char->int 변환
 	int num = atoi(argv[1]);
 
+	//제곱 출력
 	printf("%d\n", num * num);
 }
